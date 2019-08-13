@@ -11,7 +11,6 @@ $quarternary: #F9564F;
 $primary: #9C0F05;
 $secondary: #F3C677;
 
-
 @mixin gradient-background(){
  /* http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+50,0.5+100 */
 	background: $primary;
@@ -47,9 +46,6 @@ $secondary: #F3C677;
     transition:         all $transition ease;
 }
 
-html {
-	// overflow-x: hidden;
-}
 body {
 	font-family: $font-primary;
 	background: $white;
@@ -128,6 +124,19 @@ table.table tr {
 	}
 }
 
+.ftco-navbar-light {
+	background: rgba(255, 255, 255, .7)!important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	// top: 30px;
+	@include media-breakpoint-down(md) {
+		background: $black!important;
+		top: 0;
+		position: relative;
+	}
+
 	.navbar-nav {
 		> .nav-item {
 			> .nav-link {
@@ -139,37 +148,14 @@ table.table tr {
 				color: lighten($black, 30%);
 				font-weight: 400;
 				&:hover {
-					color: lighten($black, 10%);
+					color: lighten($black, 80%);
 				}
 				opacity: 1!important;
 			}
 
-
-			&.ftco-seperator {
-				position: relative;
-				margin-left: 20px;
-				padding-left: 20px;
-				@include media-breakpoint-down(md) {
-					padding-left: 0;
-					margin-left: 0;
-				}
-				&:before {
-					position: absolute;
-					content: "";
-					top: 10px;
-					bottom: 10px;
-					left: 0;
-					width: 2px;
-					background: rgba($white, .05);
-					@include media-breakpoint-down(md) {
-						display: none;
-					}
-				}
-			}
 			&.active {
 				> a {
 					color: $primary;
-					// color: rgba(255,255,255,.5);
 				}
 			}
 		}
@@ -196,27 +182,6 @@ table.table tr {
 			&.active {
 				> a {
 					color: $primary!important;
-				}
-			}
-			&.cta {
-				> a {
-					color: $white !important;
-					background: $primary;
-					border: none !important;
-					padding-top: .5rem!important;
-					padding-bottom: .5rem !important;
-					padding-left: 20px;
-					padding-right: 20px;
-					margin-top: 6px !important;
-					@include border-radius(30px);
-					span {
-						display: inline-block;
-					}
-				}
-				&.cta-colored {
-					span {
-						border-color: $primary;
-					}
 				}
 			}
 		}
@@ -266,18 +231,14 @@ table.table tr {
 		}
 
 		.navbar-brand {
-			height: 1rem;
-			background: url('../images/logod/logo-small.svg') no-repeat center center fixed;
-  		background-size: cover;
-			overflow: hidden;
-			display: none;
+			color: $black;
 		}
 	}
+}
 
 .navbar-brand {
-	color: $white;
 	img {
-		max-height: 180px;
+		max-height: 100px;
 	}
 }
 
@@ -1087,15 +1048,10 @@ textarea.form-control {
 
 
 .about-author{
-	img{
-	}
 	.desc{
 		h3{
 			font-size: 24px;
 		}
-	}
-	.bio{
-
 	}
 }
 
@@ -1384,7 +1340,6 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
-  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -1406,10 +1361,6 @@ textarea.form-control {
 .ftco-counter {
 	background: $tertiary;
 	padding: 10em 0;
-	.icon{
-		span{
-		}
-	}
 	.text{
 		strong.number{
 			font-weight: 400;
@@ -1511,15 +1462,10 @@ textarea.form-control {
 			}
 		}
 	}
-	.media-body {
-		.heading {
-
-		}
 		p {
 			font-size: 16px;
 		}
 	}
-}
 
 //### .block-10
 .block-10 {
@@ -1560,9 +1506,6 @@ textarea.form-control {
 					padding-left: 0;
 					padding-right: 0;
 					margin-bottom: 10px;
-				}
-				&:first-child {
-					// padding-left: 0;
 				}
 				&:last-child {
 					border-right: none;
@@ -1605,13 +1548,6 @@ textarea.form-control {
 					right: 10px;
 				}
 			}
-			.textfield-search, .select-wrap {
-			}
-			.textfield-search {
-				input {
-
-				}
-			}
 			.select-wrap {
 				position: relative;
 				select {
@@ -1637,8 +1573,6 @@ textarea.form-control {
 
 //### .block-18
 .block-18 {
-	.icon, .text {
-	}
 	.icon {
 		> span {
 			font-size: 40px;
@@ -1867,7 +1801,6 @@ textarea.form-control {
 			a{
 				color: lighten($black,10%);
 			}
-			span{}
 		}
 	}
 }
@@ -1877,8 +1810,6 @@ textarea.form-control {
 		outline: none!important;
 		box-shadow: none!important;
 		font-size: 15px;
-	}
-	#map {
 	}
 }
 
