@@ -9475,12 +9475,20 @@ table.table tr.Müüdud td:nth-of-type(7) a {
   visibility: hidden;
 }
 
+table.table tr.Müüdud td:last-of-type a {
+  visibility: hidden;
+}
+
 table.table tr.subhead td {
   background: #f4f4f5;
   font-weight: 500;
 }
 
 table.table tr.subhead td:nth-of-type(7) a {
+  visibility: hidden;
+}
+
+table.table tr.subhead td:last-of-type a {
   visibility: hidden;
 }
 
@@ -9493,31 +9501,6 @@ table.table tr.subhead td:nth-of-type(7) a {
   color: #9C0F05 !important;
 }
 
-.ftco-navbar-white {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.ftco-navbar-light {
-  background: transparent !important;
-}
-
-.ftco-navbar-light,
-.ftco-navbar-white {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 3;
-}
-
-@media (max-width: 991.98px) {
-  .ftco-navbar-light,
-  .ftco-navbar-white {
-    background: #404044 !important;
-    top: 0;
-    position: relative;
-  }
-}
-
 .ftco-navbar-light {
   background: rgba(255, 255, 255, 0.7) !important;
   position: absolute;
@@ -9526,11 +9509,24 @@ table.table tr.subhead td:nth-of-type(7) a {
   z-index: 3;
 }
 
+.ftco-navbar-light .navbar-brand {
+  width: 100%;
+}
+
+.ftco-navbar-light .navbar-brand img {
+  max-height: 100px;
+}
+
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #404044 !important;
     top: 0;
     position: relative;
+  }
+  .ftco-navbar-light .navbar-brand {
+    width: 50%;
+  }
+  .ftco-navbar-light .navbar-brand img {
+    max-height: 100px;
   }
 }
 
@@ -9540,13 +9536,13 @@ table.table tr.subhead td:nth-of-type(7) a {
   padding-bottom: .9rem;
   padding-left: 20px;
   padding-right: 20px;
-  color: #8b8b92;
+  color: #717179;
   font-weight: 400;
   opacity: 1 !important;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-  color: white;
+  color: #404044;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item.active > a {
@@ -9555,7 +9551,7 @@ table.table tr.subhead td:nth-of-type(7) a {
 
 .ftco-navbar-light .navbar-toggler {
   border: none;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #9C0F05;
   cursor: pointer;
   padding-right: 0;
   text-transform: uppercase;
@@ -9625,14 +9621,6 @@ table.table tr.subhead td:nth-of-type(7) a {
 .ftco-navbar-light.scrolled.sleep {
   -webkit-transition: .3s all ease-out;
   transition: .3s all ease-out;
-}
-
-.ftco-navbar-light.scrolled .navbar-brand {
-  color: #404044;
-}
-
-.navbar-brand img {
-  max-height: 100px;
 }
 
 .hero-wrap {
